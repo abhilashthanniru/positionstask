@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Chatbox UI</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      .chatbox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        height: 400px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .chatbox-header {
+        position: relative;
+        height: 50px;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 50px;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .chatbox-messages {
+        position: absolute;
+        top: 50px;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .message {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        max-width: 80%;
+        position: relative;
+      }
+
+      .message.user {
+        background-color: #007bff;
+        color: #ffffff;
+        margin-left: auto;
+      }
+
+      .message.bot {
+        background-color: #e1e1e1;
+        color: #000000;
+        margin-right: auto;
+      }
+      .chatbox-input {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        border-top: 1px solid #ccc;
+        display: flex;
+      }
+
+      .chatbox-input input {
+        flex: 1;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .chatbox-input button {
+        width: 60px;
+        border: none;
+        background-color: #007bff;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .chatbox-input button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chatbox">
+      <div class="chatbox-header">Chatbox</div>
+      <div class="chatbox-messages">
+        <div class="message bot">Hello! How can I help you?</div>
+        <div class="message user">Hi! I need some information.</div>
+        <div class="message bot">Hello! what information ??</div>
+        <div class="message user">Hi!About social Media</div>
+        <div class="message bot">Sure !!I will help</div>
+        <div class="message user">okay</div>
+        <div class="message bot">
+          SM is powerful tool where everyone can shares views and exprections
+        </div>
+        <div class="message user">ohh great.</div>
+        <div class="message bot">thanks</div>
+      </div>
+      <div class="chatbox-input">
+        <input type="text" placeholder="Type a message..." />
+        <button>Send</button>
+      </div>
+    </div>
+  </body>
+</html>
